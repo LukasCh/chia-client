@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --runInBand test/",
-    "prepare": "rm -rf dist && npm run build"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
