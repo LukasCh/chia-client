@@ -91,8 +91,9 @@ class FullNode extends RpcClient {
     );
   }
 
-  public async getUnspentCoins(
+  public async getCoins(
     puzzleHash: string,
+    includeSpentCoins: boolean,
     startHeight?: number,
     endHeight?: number
   ): Promise<CoinResponse> {
@@ -100,7 +101,7 @@ class FullNode extends RpcClient {
       puzzle_hash: puzzleHash,
       start_height: startHeight,
       end_height: endHeight,
-      include_spent_coins: false,
+      include_spent_coins: includeSpentCoins,
     });
   }
 
